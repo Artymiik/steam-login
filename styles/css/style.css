@@ -1,0 +1,847 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #181A21;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #181A21;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4a4d58;
+  border-radius: 20px;
+  border: 1px solid #4a4d58;
+}
+
+body.opened {
+  overflow: hidden;
+}
+
+.qr-code-container {
+  display: none;
+}
+
+#navbar {
+  display: none;
+}
+
+.mask {
+  background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url(https://store.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg) center top no-repeat, #181A21;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: 0.6s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 75px;
+  height: 75px;
+  border: 10px solid rgba(13, 71, 161, 0.6);
+  border-radius: 50%;
+  border-left-color: #0d47a1;
+  animation: loader 1.3s linear infinite;
+}
+
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hide {
+  opacity: 0;
+}
+
+#header {
+  height: 80px;
+  position: relative;
+}
+#header .container {
+  display: flex;
+  align-items: center;
+  margin: 40px 180px;
+  justify-content: space-between;
+}
+#header .container .hum {
+  display: none;
+}
+#header .container .href {
+  display: flex;
+  align-items: center;
+}
+#header .container .href a {
+  text-transform: uppercase;
+  color: #dcdbdb;
+  padding: 7px;
+  font-weight: 300;
+  font-size: 18px;
+  text-decoration: none;
+}
+#header .container .href a:nth-child(1) {
+  color: #1a9fff;
+  display: inline-block;
+  border-bottom: 2.5px solid #1a9fff;
+}
+#header .container .href a:nth-child(1):hover {
+  color: #1a9fff;
+}
+#header .container .href a:hover {
+  color: #fff;
+}
+#header .container img {
+  width: 176px;
+  cursor: pointer;
+}
+#header .btn-header {
+  position: relative;
+  top: -40px;
+}
+#header .btn-header a {
+  text-decoration: none;
+  color: #b6b6b6;
+  font-weight: 300;
+}
+#header .btn-header a:hover {
+  color: #ffffff;
+}
+#header .btn-header a:nth-child(1) {
+  background-color: #6c9018;
+  font-size: 11px;
+  color: #fff;
+  padding: 5px;
+  letter-spacing: 0.5px;
+}
+#header .btn-header a:nth-child(1):hover {
+  background-color: #8fb537;
+}
+#header .btn-header a:nth-child(2) {
+  margin-left: 12px;
+}
+#header .btn-header a:nth-child(3) {
+  margin-left: 4px;
+}
+#header .btn-header a:nth-child(2), #header .btn-header a:nth-child(3) {
+  font-size: 11px;
+}
+
+#global {
+  background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url(https://store.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg) center top no-repeat, #181A21;
+  height: 80vh;
+  display: flex;
+}
+#global #new {
+  display: none;
+}
+#global h1 {
+  color: #fff;
+  font-weight: 800;
+  margin: 0 auto;
+}
+#global .user {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+#global .hh {
+  margin: 50px 0 -30px;
+  font-weight: 700;
+  font-size: 18px;
+}
+#global .center {
+  display: flex;
+  margin: 0 auto;
+  width: 500px;
+  color: #fff;
+  justify-content: center;
+  background-color: #181a21;
+  padding: 24px 32px;
+  min-width: 800px;
+  height: 280px;
+  border-radius: 4px;
+  margin: auto;
+}
+#global .rem {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+#global .rem-label {
+  color: #afafaf;
+  font-size: 12px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding-left: 6px;
+}
+#global .help {
+  color: #acabab;
+  font-size: 12px;
+  margin: 20px auto;
+}
+#global .help:hover {
+  color: #cbcaca;
+}
+#global .btn-form {
+  position: relative;
+  background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  margin: 0 auto;
+}
+#global .btn-form:hover {
+  background: linear-gradient(90deg, #3aceff 20%, #2D73FF 100%);
+}
+#global form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+#global form label:nth-child(1) {
+  color: #1999ff;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  margin: 0 0 5px;
+}
+#global form .pass-label {
+  text-transform: uppercase;
+  color: #cfcfcf;
+  font-size: 12px;
+  margin: 17px 0 5px;
+}
+#global form input {
+  border-radius: 2px;
+  color: #fff;
+  padding: 10px;
+  background-color: #32353c;
+  outline: none;
+  font-size: 15px;
+  grid-area: input;
+  border: 1px solid #32353c;
+}
+#global form input:hover {
+  background-color: #3a3e45;
+}
+#global .right {
+  margin-left: 50px;
+}
+#global .right p:nth-child(1) {
+  font-size: 13px;
+  color: #1999ff;
+  text-transform: uppercase;
+  margin: 0 0 5px;
+}
+#global .right p:nth-child(3) {
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  color: #c4c4c4;
+  margin: 15px 0 0;
+}
+#global .right img {
+  border-radius: 12px;
+  filter: blur(3px);
+  position: absolute;
+}
+#global .right span {
+  position: relative;
+  background-color: #252525;
+  padding: 25px 15px;
+  margin: 60px 0;
+  font-size: 30px;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0.8;
+  color: #fff;
+}
+#global .right .sp {
+  display: flex;
+  justify-content: center;
+}
+
+#ones .all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+#ones .all .left {
+  margin-right: 10px;
+  text-align: center;
+}
+#ones .all .left p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 15px;
+}
+#ones .all .left a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 4px 17px;
+  border-radius: 2px;
+  display: block;
+  background: linear-gradient(to right, #47bfff 5%, #1a44c2 60%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-position: 25%;
+  background-size: 330% 100%;
+  text-align: center;
+  width: 130px;
+  margin: 0 auto;
+}
+#ones .all .right {
+  width: 350px;
+  text-align: center;
+  color: #b1b1b1;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#footer {
+  padding-bottom: 30px;
+}
+#footer .footer-container {
+  width: 940px;
+  margin: 0px auto;
+  padding-top: 16px;
+}
+#footer .footer-container .logo {
+  display: flex;
+  justify-content: space-between;
+}
+#footer .footer-container .logo img {
+  width: 88px;
+}
+#footer .footer-container p {
+  color: #b0b0b0;
+  font-size: 11px;
+  margin: 0px;
+  margin-left: 12px;
+  line-height: 16px;
+}
+#footer .footer-container .p2 {
+  line-height: 20px;
+}
+#footer .footer-container .rule {
+  height: 8px;
+  border-top: 1px solid #363c44;
+}
+#footer .footer-container .r2 {
+  margin-top: 60px;
+}
+
+@media only screen and (max-width: 1215px) {
+  #footer {
+    display: none;
+  }
+  .qr-code-container {
+    display: none;
+  }
+  #navbar {
+    display: flex;
+    transition: 0.7s;
+  }
+  #navbar .f1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #navbar .f1 .f22 {
+    color: #acacad;
+    font-size: 40px;
+    margin-right: 20px;
+  }
+  #navbar .open-nav {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    z-index: 3;
+    transition: transform 0.5s;
+  }
+  #navbar .open-nav.open {
+    transform: translateX(100%);
+  }
+  #navbar .href-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #171a21;
+    position: relative;
+    z-index: 999;
+    height: 100vh;
+    width: 280px;
+  }
+  #navbar .href-nav div {
+    border-top: 1px solid #2f3138;
+    border-bottom: 2px solid #000000;
+    padding: 12px;
+  }
+  #navbar .href-nav div a {
+    color: #b4b4b4;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  #navbar .href-nav div:nth-child(2) {
+    padding: 10px;
+  }
+  #navbar .href-nav div:nth-child(3) {
+    padding: 10px;
+  }
+  #navbar .href-nav div:nth-child(4) {
+    border-bottom: 2px solid #2a2b31;
+  }
+  #navbar .href-nav p {
+    color: #9d9d9d;
+    margin: 8px 10px;
+    font-weight: 200;
+  }
+  #navbar .href-nav .bottom {
+    position: absolute;
+    bottom: 0px;
+    border: none;
+  }
+  #navbar .href-nav .bottom img {
+    margin: 0px 10px;
+  }
+  #navbar .href-nav .bottom p {
+    font-size: 10px;
+  }
+  #navbar .navbar.open {
+    left: 0px;
+  }
+  .shadow-up {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    transition: 0.7s;
+  }
+  #header {
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.75);
+    height: 60px;
+  }
+  #header .container .href {
+    display: none;
+  }
+  #header .btn-header {
+    display: none;
+  }
+  #header .container {
+    display: flex;
+    align-items: center;
+    margin: 0 0;
+    justify-content: center;
+  }
+  #header .container .logo {
+    width: 156px;
+    margin-left: 5px;
+    color: #fff;
+    margin-top: 10px;
+  }
+  #header .container .hum {
+    display: flex;
+    width: 36px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+  }
+  #global {
+    height: 100vh;
+  }
+  #global .center {
+    min-width: 650px;
+  }
+  #global form {
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 759px) {
+  #navbar {
+    display: flex;
+  }
+  #navbar .navbar.open {
+    left: 0px;
+  }
+  #ones .all {
+    margin: 117px 0;
+  }
+  #header {
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.75);
+    height: 60px;
+  }
+  #header .container .href {
+    display: none;
+  }
+  #header .btn-header {
+    display: none;
+  }
+  #header {
+    position: fixed;
+    width: 100%;
+    background-color: #181A21;
+    z-index: 2;
+  }
+  #header .container {
+    display: flex;
+    align-items: center;
+    margin: 0 0 200px;
+    justify-content: center;
+  }
+  #header .container .logo {
+    width: 156px;
+    margin-left: 5px;
+    color: #fff;
+    margin-top: 10px;
+  }
+  #header .container .hum {
+    display: flex;
+    width: 36px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+  }
+  #global .btn-form {
+    width: 100%;
+  }
+  #global {
+    height: 119vh;
+    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #1d1f29 100%) fixed no-repeat, url(https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg) center top no-repeat, #171921;
+  }
+  #global #new {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: -70px auto;
+    align-items: center;
+  }
+  #global #new p:nth-child(1) {
+    color: #1999ff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 6px 0px 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  #global #new p:nth-child(2) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #afafaf;
+    margin: 8px;
+    text-align: center;
+    width: 180px;
+  }
+  #global #new a:nth-child(3) {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  #global #new a:nth-child(4) {
+    text-align: center;
+    text-decoration-line: underline;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #afafaf;
+    padding: 12px 0px;
+    cursor: pointer;
+  }
+  #global .help {
+    margin: 50px auto 10px;
+  }
+  #global .rem {
+    margin: 10px 0;
+  }
+  #global h1 {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+  }
+  #global .right {
+    display: none;
+  }
+  #global .center {
+    background-color: transparent;
+    width: 295px;
+    min-width: 0px;
+    margin: 90px auto;
+  }
+  #global form {
+    width: 280px;
+  }
+  #global form .pass-label {
+    margin: 4px 0 5px;
+  }
+  #global form input {
+    padding: 12px;
+  }
+  #global form label:nth-child(1) {
+    font-size: 11px;
+  }
+  #global form .pass-label {
+    font-size: 11px;
+  }
+  #ones .all {
+    flex-direction: column;
+  }
+  #ones .right p {
+    margin-top: -20px;
+    padding-block: 60px;
+  }
+  .qr-code-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -120px;
+  }
+  .qr-code-container p:nth-child(1) {
+    font-size: 13px;
+    color: #1999ff;
+    text-transform: uppercase;
+    margin: 0 0 5px;
+  }
+  .qr-code-container p:nth-child(3) {
+    text-align: center;
+    font-size: 12px;
+    width: 280px;
+    color: #c4c4c4;
+    margin: 15px 0 0;
+  }
+  .qr-code-container img {
+    border-radius: 12px;
+    filter: blur(3px);
+    position: absolute;
+  }
+  .qr-code-container span {
+    position: relative;
+    background-color: #252525;
+    padding: 25px 15px;
+    margin: 60px 0;
+    font-size: 30px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.8;
+    color: #fff;
+  }
+  .qr-code-container .restart {
+    display: flex;
+    justify-content: center;
+  }
+}
+.show-qr {
+  display: flex;
+}
+
+.new-opacity {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 450px) {
+  body {
+    background-color: #1e1f26;
+  }
+  .mask {
+    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url(https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg) center top no-repeat, #181A21;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transition: 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader {
+    width: 75px;
+    height: 75px;
+    border: 10px solid rgba(13, 71, 161, 0.6);
+    border-radius: 50%;
+    border-left-color: #0d47a1;
+    animation: loader 1.3s linear infinite;
+  }
+  @keyframes loader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .hide {
+    opacity: 0;
+  }
+  #navbar {
+    display: flex;
+  }
+  #navbar .href-nav {
+    height: 94vh;
+  }
+  #navbar .navbar.open {
+    left: 0px;
+  }
+  #header {
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.75);
+    height: 60px;
+  }
+  #header .container .href {
+    display: none;
+  }
+  #header .btn-header {
+    display: none;
+  }
+  #header {
+    position: fixed;
+    width: 100%;
+    background-color: #181A21;
+    z-index: 2;
+  }
+  #header .container {
+    display: flex;
+    align-items: center;
+    margin: 0 0;
+    justify-content: center;
+  }
+  #header .container .logo {
+    width: 156px;
+    margin-left: 2px;
+    color: #fff;
+    margin-top: 10px;
+  }
+  #header .container .hum {
+    display: flex;
+    width: 36px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+  }
+  #global .btn-form {
+    width: 100%;
+  }
+  #global {
+    height: 90vh;
+    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #1d1f29 100%) fixed no-repeat, url(https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg) center top no-repeat, #171921;
+  }
+  #global #new {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: -70px auto;
+    align-items: center;
+  }
+  #global #new p:nth-child(1) {
+    color: #1999ff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 6px 0px 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  #global #new p:nth-child(2) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #afafaf;
+    margin: 8px;
+    text-align: center;
+    width: 180px;
+  }
+  #global #new a:nth-child(3) {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  #global #new a:nth-child(4) {
+    text-align: center;
+    text-decoration-line: underline;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #afafaf;
+    padding: 12px 0px;
+    cursor: pointer;
+  }
+  #global .help {
+    margin: 50px auto 10px;
+  }
+  #global .rem {
+    margin: 10px 0;
+  }
+  #global h1 {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+  }
+  #global .right {
+    display: none;
+  }
+  #global .center {
+    background-color: transparent;
+    width: 295px;
+    min-width: 0px;
+    margin: 90px auto;
+  }
+  #global form {
+    width: 280px;
+  }
+  #global form .pass-label {
+    margin: 4px 0 5px;
+  }
+  #global form input {
+    padding: 12px;
+  }
+  #global form label:nth-child(1) {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  #global form .pass-label {
+    font-size: 11px;
+  }
+  #ones .all {
+    flex-direction: column;
+  }
+  #ones .right p {
+    margin-top: -20px;
+    padding-block: 60px;
+  }
+}/*# sourceMappingURL=style.css.map */

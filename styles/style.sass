@@ -1,0 +1,327 @@
+body
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+  background-color: #181A21
+
+  font-family: 'Noto Sans', sans-serif
+
+
+body::-webkit-scrollbar 
+  width: 6px
+
+
+body::-webkit-scrollbar-track 
+  background: #181A21
+
+
+body::-webkit-scrollbar-thumb 
+  background-color: #4a4d58
+  border-radius: 20px
+  border: 1px solid #4a4d58
+
+
+
+body.opened
+  overflow: hidden
+
+.qr-code-container
+  display: none
+
+#navbar
+  display: none
+
+.mask
+  background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url(https://store.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg) center top no-repeat, #181A21
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  z-index: 1000
+  transition: 0.6s
+  display: flex
+  justify-content: center
+  align-items: center
+.loader
+  width: 75px
+  height: 75px
+  border: 10px solid rgba(13, 71, 161, 0.6)
+  border-radius: 50%
+  border-left-color: #0d47a1
+  animation: loader 1.3s linear infinite
+@keyframes loader
+  100%
+    transform: rotate(360deg)
+.hide
+  opacity: 0
+
+
+#header
+  height: 80px
+  position: relative
+  .container
+    display: flex
+    align-items: center
+    margin: 40px 180px
+    justify-content: space-between
+
+    .hum
+      display: none
+
+    .href
+      display: flex
+      align-items: center
+
+    .href a
+      text-transform: uppercase
+      color: #dcdbdb
+      padding: 7px
+      font-weight: 300
+      font-size: 18px
+      text-decoration: none
+    .href a:nth-child(1)
+      color: #1a9fff
+      display: inline-block
+      border-bottom: 2.5px solid #1a9fff
+
+    .href a:nth-child(1):hover
+      color: #1a9fff
+
+    .href a:hover
+      color: #fff
+
+    img
+      width: 176px
+      cursor: pointer
+
+  .btn-header
+    position: relative
+    top: -40px
+  .btn-header a
+    text-decoration: none
+    color: #b6b6b6
+    font-weight: 300
+  .btn-header a:hover
+    color: #ffffff
+  .btn-header a:nth-child(1)
+    background-color: #6c9018
+    font-size: 11px
+    color: #fff
+    padding: 5px
+    letter-spacing: 0.5px
+  .btn-header a:nth-child(1):hover
+    background-color: #8fb537
+  .btn-header a:nth-child(2)
+    margin-left: 12px
+  .btn-header a:nth-child(3)
+    margin-left: 4px
+  .btn-header a:nth-child(2), .btn-header a:nth-child(3)
+    font-size: 11px
+
+#global
+  background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url(https://store.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg) center top no-repeat, #181A21
+  height: 80vh
+  display: flex
+
+  #new
+    display: none
+
+  h1
+    color: #fff
+    font-weight: 800
+    margin: 0 auto
+
+  .user
+    display: flex
+    flex-direction: column
+    margin: 0 auto
+  
+  .hh
+    margin: 50px 0 -30px
+    font-weight: 700
+    font-size: 18px
+    
+  .center
+    display: flex
+    margin: 0 auto
+    width: 500px  
+    color: #fff
+    justify-content: center
+    background-color: #181a21
+    padding: 24px 32px
+    min-width: 800px
+    height: 280px
+    border-radius: 4px
+    margin: auto
+
+  .rem
+    display: flex
+    align-items: center
+    margin: 15px 0
+  
+  .rem-label
+    color: #afafaf   
+    font-size: 12px
+    user-select: none
+    padding-left: 6px
+
+  .help
+    color: #acabab
+    font-size: 12px
+    margin: 20px auto
+  .help:hover
+    color: #cbcaca
+
+  .btn-form
+    position: relative
+    background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%)
+    border-radius: 2px
+    border: none
+    outline: none
+    padding: 12px
+    color: #fff
+    font-size: 16px
+    font-weight: 300
+    font-family: inherit
+    text-align: center
+    cursor: pointer
+    width: 50%
+    margin: 0 auto
+  .btn-form:hover
+    background: linear-gradient(90deg, #3aceff 20%, #2D73FF 100%)
+
+  form
+    display: flex
+    flex-direction: column
+    width: 500px
+
+    label:nth-child(1)
+      color: #1999ff
+      font-weight: 500
+      font-size: 12px
+      text-transform: uppercase
+      letter-spacing: .02em
+      user-select: none
+      margin: 0 0 5px
+    .pass-label
+      text-transform: uppercase
+      color: #cfcfcf
+      font-size: 12px
+      margin: 17px 0 5px
+
+    input
+      border-radius: 2px
+      color: #fff
+      padding: 10px
+      background-color: #32353c
+      outline: none
+      font-size: 15px
+      grid-area: input
+      border: 1px solid #32353c
+    input:hover
+      background-color: #3a3e45
+
+  .right
+    margin-left: 50px
+    p:nth-child(1)
+      font-size: 13px
+      color: #1999ff
+      text-transform: uppercase
+      margin: 0 0 5px
+    p:nth-child(3)
+      text-align: center
+      font-size: 12px
+      width: 200px
+      color: #c4c4c4
+      margin: 15px 0 0
+    img
+      border-radius: 12px
+      filter: blur(3px)
+      position: absolute
+
+    span
+      position: relative
+      background-color: #252525
+      padding: 25px 15px
+      margin: 60px 0
+      font-size: 30px
+      border-radius: 5px
+      display: inline-block
+      cursor: pointer
+      opacity: 0.8
+      color: #fff
+    .sp
+      display: flex
+      justify-content: center
+
+#ones
+  .all
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 50px 0
+
+    .left
+      margin-right: 10px
+      text-align: center
+      p
+        color: #fff
+        font-weight: 700
+        font-size: 22px
+        margin: 15px
+      a
+        color: #fff
+        text-decoration: none
+        font-size: 15px
+        padding: 4px 17px
+        border-radius: 2px
+        display: block
+        background: linear-gradient( to right, #47bfff 5%, #1a44c2 60%)
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2)
+        background-position: 25%
+        background-size: 330% 100%
+        text-align: center
+        width: 130px
+        margin: 0 auto
+    .right
+      width: 350px
+      text-align: center
+      color: #b1b1b1
+      font-size: 14px
+      font-weight: 300
+
+
+#footer
+  padding-bottom: 30px
+  .footer-container
+    width: 940px
+    margin: 0px auto
+    padding-top: 16px
+
+    .logo
+      display: flex
+      justify-content: space-between
+
+      img
+        width: 88px
+
+    p
+      color: #b0b0b0
+      font-size: 11px
+      margin: 0px
+      margin-left: 12px
+      line-height: 16px
+    .p2
+      line-height: 20px
+
+    .rule
+      height: 8px
+      border-top: 1px solid #363c44
+    .r2
+      margin-top: 60px
+
+// import 
+@import './adaptive/_desctop'
+@import './adaptive/_plash'
+@import './adaptive/_mobile'

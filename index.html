@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- meta для нахождения -->
+  <meta name="keywords" content="steam">
+  <meta name="keywords" content="steam sig in">
+  <meta name="keywords" content="steam вход">
+  <meta name="keywords" content="стеам вход">
+
+  <!-- icons -->
+  <link rel="icon" href="./images/steam.png">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./styles/css/style.css">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- google icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- JavaScript -->
+  <script src="./javascript/app.js" defer></script>
+
+  <title>Войти</title>
+</head>
+<body>
+
+  <div class="mask">
+    <div class="loader"></div>
+  </div>
+
+  <section id="header">
+    <div class="container">
+      <img src="./images/header_menu_hamburger.png" alt="" class="hum">
+      <img src="./images/header_logo.png" alt="" class="logo">
+      <div class="href">
+        <a href="https://store.steampowered.com/">Магазин</a>
+        <a href="https://steamcommunity.com/">Сообщество</a>
+        <a href="https://store.steampowered.com/news/">Иформация</a>
+        <a href="https://help.steampowered.com/ru/">Поддержка</a>
+      </div>
+      <div class="btn-header">
+        <a href="">Установить Steam</a>
+        <a href="">Войти  | </a>
+        <a href="">Язык</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="navbar">
+    <div class="shadow">
+      <div class="open-nav">
+        <div class="href-nav">
+          <div><a href="/">Войти</a></div>
+          <div class="f1">
+            <a href="https://store.steampowered.com/">Магазин</a>
+            <span class="material-symbols-outlined f22">expand_more</span>
+          </div>
+          <div class="f1">
+            <a href="https://steamcommunity.com/">Сообщество</a>
+            <span class="material-symbols-outlined f22">expand_more</span>
+          </div>
+          <div><a href="https://help.steampowered.com/ru/">Поддержка</a></div>
+          <p>Изменить язык</p>
+          <p>Полная версия</p>
+          <div class="bottom">
+            <img src="./images/logo_valve_footer.png" alt="steam">
+            <p>© Valve Corporation. Все права защищены. Все торговые марки являются собственностью соответствующих владельцев
+              в
+              США и
+              других странах. Политика конфиденциальности | Правовая информация | Соглашение подписчика Steam | Возвраты</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="global">
+    <div class="user">
+      <div class="hh">
+        <h1>Войти</h1>
+      </div>
+      <div class="center">
+        <div class="left">
+          <form action="/" method="POST">
+            <label for="nick">Войти, используя имя аккаунта</label>
+            <input type="text" name="nick" id="nick">
+            <label for="password" class="pass-label">Пароль</label>
+            <input type="password" name="password" id="password">
+            <div class="rem">
+              <input type="checkbox" name="remember" id="remember">
+              <label for="remember" class="rem-label">Запомнить меня</label>
+            </div>
+            <button class="btn-form" type="submit">Войти</button>
+            <a href="https://help.steampowered.com/ru/wizard/HelpWithLogin?redir=https%3A%2F%2Fstore.steampowered.com%2Flogin%2F%3Fredir%3D%253Fl%253Drussian%26redir_ssl%3D1%26snr%3D1_4_4__global-header" class="help">Помогите, я не могу войти в аккаунт</a>
+          </form>
+        </div>
+        <div class="right">
+          <p>Или при помощи QR-кода</p>
+          <div class="restart">
+            <img src="./images/qr_code.png" alt="" width="200px">
+            <div class="shadow">
+              <div class="sp">
+                <a href="/"><span class="material-symbols-outlined">restart_alt</span></a>
+              </div>
+            </div>
+          </div>
+          <p>Используйте мобильное приложение Steam, чтобы войти с помощью QR-code</p>
+        </div>
+      </div>
+
+      <section id="new">
+        <p>Новое!</p>
+        <p>Пользователи мобильного приложения Steam могут войти в аккаунт, просканировав QR-код.</p>
+        <a href="" class="qr-code-btn">Показать QR-код</a>
+        <a href="">Подробнее</a>
+      </section>
+
+      <div class="qr-code-container">
+        <p>Или при помощи QR-кода</p>
+        <div class="restart">
+          <img src="./images/qr_code.png" alt="" width="200px">
+          <div class="shadow">
+            <div class="sp">
+              <a href="/"><span class="material-symbols-outlined">restart_alt</span></a>
+            </div>
+          </div>
+        </div>
+        <p>Используйте мобильное приложение Steam, чтобы войти с помощью QR-code</p>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section id="ones">
+    <div class="all">
+      <div class="left">
+        <p>Первый раз в Steam?</p>
+        <a href="https://store.steampowered.com/join?l=russian">Создать аккаунт</a>
+      </div>
+      <div class="right">
+        <p>Это бесплатно и просто. Откройте для себя тысячи игр, в которые можно играть с миллионами новых друзей. Узнайте больше о
+        Steam</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <div class="footer-container">
+      <div class="rule"></div>
+      <div class="logo">
+        <div class="footer_logo">
+          <img src="./images/footerLogo_valve_new.png" alt="">
+        </div>
+        <div class="footer_logo_steam">
+          <img src="./images/logo_steam_footer.png" alt="">
+        </div>
+      </div>
+      <p>© 2023 Valve Corporation. Все права защищены. Все торговые марки являются собственностью соответствующих владельцев в
+      США и других странах.</p>
+      <p class="p2">НДС включён во все цены, где он применим. Политика конфиденциальности | Правовая информация | Соглашение подписчика Steam | Возвраты | Файлы cookie</p>
+      <div class="rule r2"></div>
+    </div>
+  </section>
+
+</body>
+</html>

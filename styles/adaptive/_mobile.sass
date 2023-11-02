@@ -1,0 +1,171 @@
+@media only screen and (max-width: 450px)
+  body
+    background-color: #1e1f26
+
+  .mask
+    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url(https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg) center top no-repeat, #181A21
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    z-index: 999
+    transition: 0.6s
+    display: flex
+    justify-content: center
+    align-items: center
+  .loader
+    width: 75px
+    height: 75px
+    border: 10px solid rgba(13, 71, 161, 0.6)
+    border-radius: 50%
+    border-left-color: #0d47a1
+    animation: loader 1.3s linear infinite
+  @keyframes loader
+    100%
+      transform: rotate(360deg)
+  .hide
+    opacity: 0
+
+  #navbar
+    display: flex
+
+    .href-nav
+      height: 94vh
+
+  #navbar .navbar.open 
+    left: 0px
+
+  #header
+    box-shadow: 0 0 7px 0 rgba( 0, 0, 0, 0.75 )
+    height: 60px
+
+  #header 
+    .container 
+      .href
+        display: none
+
+
+  #header .btn-header 
+    display: none
+  #header 
+    position: fixed
+    width: 100%
+    background-color: #181A21
+    z-index: 2
+
+    .container 
+      display: flex
+      align-items: center
+      margin: 0 0
+      justify-content: center
+
+      .logo
+        width: 156px
+        margin-left: 2px
+        color: #fff
+        margin-top: 10px
+
+      .hum
+        display: flex
+        width: 36px
+        position: absolute
+        left: 10px
+        top: 15px
+
+  #global .btn-form
+    width: 100%
+
+  #global
+    height: 90vh
+    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #1d1f29 100%) fixed no-repeat, url(https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg) center top no-repeat, #171921
+
+    #new
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin: -70px auto
+      align-items: center
+
+      p:nth-child(1)
+        color: #1999ff
+        font-weight: 500
+        font-size: 12px
+        line-height: 16px
+        margin: 6px 0px 15px
+        text-transform: uppercase
+        letter-spacing: .02em
+
+      p:nth-child(2)
+        font-weight: 400
+        font-size: 12px
+        line-height: 16px
+        color: #afafaf
+        margin: 8px
+        text-align: center
+        width: 180px
+
+      a:nth-child(3)
+        background-color: rgba(255,255,255,.1)
+        border-radius: 2px
+        font-weight: 700
+        font-size: 12px
+        line-height: 20px
+        text-align: center
+        color: #fff
+        padding: 8px 16px
+        text-decoration: none
+
+      a:nth-child(4)
+        text-align: center
+        text-decoration-line: underline
+        font-weight: 400
+        font-size: 12px
+        line-height: 24px
+        color: #afafaf
+        padding: 12px 0px
+        cursor: pointer
+
+    .help
+      margin: 50px auto 10px
+    .rem
+      margin: 10px 0
+
+    h1
+      display: flex
+      justify-content: center
+      margin: 25px 0
+
+    .right
+      display: none
+
+    .center
+      background-color: transparent
+      width: 295px
+      min-width: 0px
+      margin: 90px auto
+
+
+    form
+      width: 280px
+
+      .pass-label
+        margin: 4px 0 5px
+
+      input
+        padding: 12px
+
+      label:nth-child(1)
+        font-size: 11px
+        font-weight: 600
+
+      .pass-label
+        font-size: 11px
+
+  #ones
+
+    .all
+      flex-direction: column
+
+    .right p
+      margin-top: -20px
+      padding-block: 60px

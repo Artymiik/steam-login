@@ -1,0 +1,119 @@
+@media only screen and (max-width: 1215px)
+
+  #footer
+    display: none
+
+  .qr-code-container
+    display: none
+
+  #navbar
+    display: flex
+    transition: .7s
+    .f1
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      .f22
+        color: #acacad
+        font-size: 40px
+        margin-right: 20px
+
+    .open-nav
+      position: fixed
+      top: 0
+      left: -280px
+      z-index: 3
+      transition: transform .5s
+    .open-nav.open
+      transform: translateX(100%)
+    .href-nav
+      display: flex
+      flex-direction: column
+      background-color: #171a21
+      position: relative
+      z-index: 999
+      height: 100vh
+      width: 280px
+
+      div
+        border-top: 1px solid #2f3138
+        border-bottom: 2px solid #000000
+        padding: 12px
+
+        a
+          color: #b4b4b4
+          font-weight: 300
+          text-decoration: none
+          font-size: 22px
+      div:nth-child(2)
+        padding: 10px
+      div:nth-child(3)
+        padding: 10px
+      div:nth-child(4)
+        border-bottom: 2px solid #2a2b31
+
+      p
+        color: #9d9d9d
+        margin: 8px 10px
+        font-weight: 200
+
+      .bottom
+        position: absolute
+        bottom: 0px
+        border: none
+
+        img
+          margin: 0px 10px
+
+        p
+          font-size: 10px
+
+  #navbar .navbar.open 
+    left: 0px
+
+  .shadow-up
+    position: fixed
+    background: rgba(0, 0, 0, 0.5)
+    width: 100%
+    height: 100%
+    z-index: 9999
+    transition: .7s
+
+  #header
+    box-shadow: 0 0 7px 0 rgba( 0, 0, 0, 0.75 )
+    height: 60px
+  #header .container .href
+    display: none
+  #header .btn-header 
+    display: none
+
+  #header 
+
+    .container 
+      display: flex
+      align-items: center
+      margin: 0 0
+      justify-content: center
+
+      .logo
+        width: 156px
+        margin-left: 5px
+        color: #fff
+        margin-top: 10px
+
+      .hum
+        display: flex
+        width: 36px
+        position: absolute
+        left: 10px
+        top: 15px
+    
+  #global
+    height: 100vh
+
+    .center
+      min-width: 650px
+
+    form
+      width: 350px
